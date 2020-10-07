@@ -70,6 +70,21 @@ class Person
     def call_friend(friend)
         self.happiness += 3
         friend.happiness += 3 
+        return "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
-end
-        #binding.pry 
+
+    def start_conversation(person, topic)
+      if topic == "politics"
+        person.happiness -= 2
+        self.happiness -= 2
+        return "blah blah partisan blah lobbyist"
+      elsif topic == "weather"
+        person.happiness += 1
+        self.happiness += 1
+        return "blah blah sun blah rain"
+      else 
+        return "blah blah blah blah blah"
+      end
+    end
+end 
+       # binding.pry 
